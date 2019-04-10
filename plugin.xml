@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-customnfcreader" version="1.0.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CustomNFCReader</name>
+    <js-module name="CustomNFCReader" src="www/CustomNFCReader.js">
+        <clobbers target="CustomNFCReader" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="CustomNFCReader">
+                <param name="android-package" value="cordova.plugin.customnfcreader.CustomNFCReader" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/CustomNFCReader.java" target-dir="src/cordova/plugin/customnfcreader/CustomNFCReader" />
+    </platform>
+</plugin>
