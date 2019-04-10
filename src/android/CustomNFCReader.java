@@ -156,7 +156,7 @@ public class CustomNFCReader extends CordovaPlugin {
     }
 
     private void init() {
-
+        Log.d(":: USB_DEVICE :: ", mManager.getDeviceList().values()+"");
         if (mManager.getDeviceList().values().size() > 0) {
             if (!initState) {
                 IntentFilter filter = new IntentFilter();
